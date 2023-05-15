@@ -1,0 +1,3 @@
+---
+# renovate: datasource=rubygems depName=fpm
+fpm_version: 1.15.1

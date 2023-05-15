@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":disableVulnerabilityAlerts"],
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "repositories": ["thejan2009/renovate-zoderror"],
+  "onboarding": false,
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 0,
+  "recreateClosed": false,
+  "requireConfig": "optional",
+  "rangeStrategy": "pin",
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^test.yml$"
+      ],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+.*?_version: (?<currentValue>\\S*)\\s"
+      ]
+    }
+  ]
+}
